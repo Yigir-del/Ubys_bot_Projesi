@@ -32,10 +32,7 @@ Python 3.x
 requests
 beautifulsoup4
 
-
 Uyarılar
 users.py içinde örnek kullanıcılar var. Gerçek UBYS bilgilerini sen girmelisin.
-
 Bu araç tamamen eğitim amaçlıdır. UBYS sistemine yapılacak aşırı isteklerden geliştirici sorumlu değildir.
-
 Sistemde tutulan hiçbir veri dışa aktarılmaz, güvenliğe özen gösterilmiştir.
