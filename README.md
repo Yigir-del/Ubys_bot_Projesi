@@ -1,51 +1,41 @@
-UBYS Botu
-Python ile geliştirilen bu bot, OMÜ'nün UBYS sistemine otomatik giriş yapar ve çeşitli kullanıcı işlemlerini yönetmek için temel bir altyapı sunar.
+# UBYS Automation Bot 🚀
 
-Özellikler
-UBYS sistemine otomatik giriş
+UBYS (Ondokuz Mayıs Üniversitesi Bilgi Yönetim Sistemi) için geliştirilmiş, terminal tabanlı bir otomasyon betiği.
 
-HTML içeriklerden veri çekme
+## Özellikler
 
-Kullanıcı yönetimi
+- UBYS sistemine programatik olarak login olur.
+- Oturum yönetimi yapar, geçerli sessionları kontrol eder.
+- HTML response'ları `BeautifulSoup` ile parse eder.
+- Kullanıcıya ait bilgileri çeker, doğrular, işler.
 
-Otomatik oturum başlatma ve kontrol
+## Modüller
 
-Giriş hatalarını loglama
+- `main.py` → Botun çalıştığı ana script. Giriş noktasıdır.
+- `login.py` → Login işlemleri. UBYS token’ını alır.
+- `manager.py` → Kullanıcıları tanımlar, oturumları kontrol eder.
+- `parser.py` → UBYS'den gelen HTML'i parse eder.
+- `message.py` → Bot içi mesaj formatları burada tanımlı.
+- `mesage_control.py` → Mesaj kontrol fonksiyonları.
+- `users.py` → Kullanıcı listesi. Örnek veri barındırır.
 
-Dosya Yapısı
-login.py: UBYS giriş işlemleri ve token alma işlemleri burada gerçekleşir.
+## Kullanım
 
-manager.py: Giriş yapan kullanıcıların oturum yönetimi.
-
-main.py: Uygulamanın giriş noktası.
-
-mesage.py, mesage_control.py: Mesaj işlemleriyle ilgilenir.
-
-parser.py: UBYS'den gelen HTML yanıtlarını parse eder.
-
-users.py: Kullanıcı bilgileri (örnek kullanıcı listesi).
-
-Kurulum
-Gerekli kütüphaneleri yükleyin:
-
-nginx
-Kopyala
-Düzenle
-pip install requests beautifulsoup4
-users.py dosyasını düzenleyerek kendi kullanıcı bilgilerinizi girin.
-
-Uygulamayı başlatın:
-
-css
-Kopyala
-Düzenle
+```bash
+git clone https://github.com/kullaniciadi/ubys_bot.git
+cd ubys_bot
+pip install -r requirements.txt
 python main.py
-Uyarı
-Bu proje eğitim amaçlı geliştirilmiştir.
 
-Şahsi bilgilerinizi kimseyle paylaşmayınız.
+Gereksinimler
+Python 3.x
+requests
+beautifulsoup4
 
-UBYS sistemine aşırı istek göndermek sisteme zarar verebilir; sorumluluk kullanıcıya aittir.
 
-Geliştirici Notu
-Kod sade ve modüler olacak şekilde yazılmıştır. Yeni özellikler eklemek için manager.py üzerinden ilerleyebilirsiniz.
+Uyarılar
+users.py içinde örnek kullanıcılar var. Gerçek UBYS bilgilerini sen girmelisin.
+
+Bu araç tamamen eğitim amaçlıdır. UBYS sistemine yapılacak aşırı isteklerden geliştirici sorumlu değildir.
+
+Sistemde tutulan hiçbir veri dışa aktarılmaz, güvenliğe özen gösterilmiştir.
